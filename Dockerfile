@@ -16,7 +16,7 @@ RUN mkdir /workdir && \
 
 WORKDIR /workdir
 
-# ENTRYPOINT ["istanbul"]
-# CMD ["--help"]
+ENTRYPOINT ["istanbul"]
+CMD ["--help"]
 
-ENTRYPOINT ["/bin/sh", "-c", "istanbul setup --quorum --num 4 --nodes --verbose --save && ls -al"]
+# ENTRYPOINT ["/bin/sh", "-c", "istanbul setup --quorum --num 4 --nodes --verbose --save && ls -al"]
