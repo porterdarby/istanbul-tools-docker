@@ -5,8 +5,10 @@ A Dockerization of the `istanbul-tools` repository (hosted at https://github.com
 ## Usage
 The intent of this docker image is to facilitate the usage of istanbul-tools. To support this, the image has been designed to take in the same parameters that the istanbul-tools executable would take in. An example would be as so:
 
-``docker run --mount type=bind,src=`pwd`,dst=/workdir reportt/istanbul-tools-docker:latest \
-setup --quorum --num 4 --nodes --verbose --save``
+```
+docker run --mount type=bind,src=`pwd`,dst=/workdir reportt/istanbul-tools-docker:latest \
+setup --quorum --num 4 --nodes --verbose --save
+```
 
 The required elements are as follows:
 
