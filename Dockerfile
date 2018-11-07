@@ -10,6 +10,7 @@ RUN apk add gcc git libc-dev make && \
 FROM alpine:3.8
 
 ARG VCS_REF
+ARG BUILD_DATE
 
 LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-ref=$VCS_REF \
