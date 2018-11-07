@@ -1,5 +1,7 @@
 # istanbul-tools-docker
 
+[![](https://images.microbadger.com/badges/version/reportt/istanbul-tools-docker.svg)](https://microbadger.com/images/reportt/istanbul-tools-docker "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/reportt/istanbul-tools-docker.svg)](https://microbadger.com/images/reportt/istanbul-tools-docker "Get your own image badge on microbadger.com")
+
 A Dockerization of the `istanbul-tools` repository (hosted at https://github.com/getamis/istanbul-tools).
 
 ## Usage
