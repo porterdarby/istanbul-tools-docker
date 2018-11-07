@@ -7,9 +7,9 @@ RUN apk add gcc git libc-dev make && \
     make
 
 # Move binary to a clean image
-FROM golang:1.11.1-alpine3.8
+FROM alpine:3.8
 
-COPY --from=builder /go/src/github.com/getamis/istanbul-tools/build/bin/istanbul /go/bin/istanbul
+COPY --from=builder /go/src/github.com/getamis/istanbul-tools/build/bin/istanbul /usr/bin/istanbul
 
 WORKDIR /workdir
 
