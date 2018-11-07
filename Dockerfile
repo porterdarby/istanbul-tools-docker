@@ -1,17 +1,15 @@
+# Build the source
 FROM golang:1.11.1-alpine3.8 as builder
-
-WORKDIR /go/src/github.com/getamis/istanbul-tools
 RUN apk add gcc git libc-dev make && \
-    git clone https://github.com/getamis/istanbul-tools.git .
+    mkdir -p /go/src/github.com/getamis/istanbul-tools && \
+    cd /go/src/github.com/getamis/istanbul-tools && \
+    git clone https://github.com/getamis/istanbul-tools.git . && \
+    make
 
-RUN make
-
+# Move binary to a clean image
 FROM golang:1.11.1-alpine3.8
 
 COPY --from=builder /go/src/github.com/getamis/istanbul-tools/build/bin/istanbul /go/bin/istanbul
-
-RUN mkdir /workdir && \
-    chmod 777 /workdir
 
 WORKDIR /workdir
 
